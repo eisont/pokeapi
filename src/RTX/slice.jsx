@@ -22,3 +22,17 @@ export const pokemonSlice = createSlice({
       }); // 잘 처리됨
   },
 });
+
+export const favoriteSlice = createSlice({
+  name: 'favorite',
+  initialState: [],
+  reducers: {
+    addToFavorite(state, action) {
+      state.push(action.payload.pokemonId);
+    }, // redux tookit 기본기능 덕에 push를 사용해 원본을 건드려도 된다.
+    removeFromFavorite(state, action) {
+      const index = state.indexOf(action.payload.pokemonId);
+      if (index !== -1) state.splice(index, 1);
+    },
+  },
+});
