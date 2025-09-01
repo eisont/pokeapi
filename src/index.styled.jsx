@@ -20,13 +20,6 @@ export const Title = styled.div`
   font-weight: 600;
 `;
 
-export const Main = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 10px;
-`;
 export const Nav = styled.div`
   width: 100%;
   height: 80px;
@@ -60,11 +53,29 @@ export const Menu = styled(Link)`
   }
 `;
 
+export const MainBox = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  div {
+    background: #fff;
+    transition: 0.3s;
+  }
+
+  :hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  }
+`;
+
 export const Item = styled.div`
   width: 100px;
   height: 150px;
 
-  background: #aeaeae;
+  border: 1px solid #aeaeae;
   border-radius: 10px;
 
   display: flex;
